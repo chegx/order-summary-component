@@ -20,7 +20,8 @@ body {
   font-family: 'Red Hat Display', sans-serif;
   background-color: var(--Pale-blue);
   background-image: url(../images/pattern-background-mobile.svg);
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 main {
@@ -28,7 +29,7 @@ main {
   border-radius: 1.25rem;
   overflow: hidden;
   /* no need to add border-radius to image and card  */
-  box-shadow: -0.2rem 0.25rem 0.75rem hsl(245, 75%, 52%, 0.15);
+  box-shadow: 0 6px 20px 0 hsla(0 0% 0% /15%);
 }
 
 h1 {
@@ -37,24 +38,15 @@ h1 {
   color: var(--Dark-blue);
 }
 
-h6 {
-  font-size: 0.9rem;
-  font-weight: 900;
-  margin-bottom: 0.1rem;
-  color: var(--Dark-blue);
-}
-
 p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--Desaturated-blue);
-  margin-bottom: 0;
-  /* changing Chromium default p margin  */
 }
 
 article {
   background-color: white;
-  padding: 2.2rem 1.5rem 2rem;
+  padding: 2rem 1.5rem 1.5rem;
   text-align: center;
 }
 
@@ -65,28 +57,39 @@ article {
 }
 
 .description {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  line-height: 180%;
+  margin: 1rem 0.75rem 1.5rem;
+  line-height: 165%;
 }
 
-.plan-box {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+.plan-price {
   background-color: var(--Very-pale-blue);
-  padding: 6.5%;
+  padding: 6%;
   border-radius: 0.8rem;
+  text-align: right;
 }
 
 #icon {
   width: 3rem;
+  margin-right: 1.3rem;
+  float: left;
 }
 
-.plan-price {
-  text-align: left;
-  margin-left: -5%;
+ul {
+  list-style: none;
+  float: left;
+}
+
+.plan {
+  color: var(--Dark-blue);
+  font-size: 0.88rem;
+  font-weight: 900;
+  margin-top: 3px;
+}
+
+.price {
+  color: var(--Desaturated-blue);
+  font-size: 0.88rem;
+  font-weight: 500;
 }
 
 button {
@@ -94,25 +97,28 @@ button {
   border-radius: 0.7rem;
   font-size: 0.9rem;
   font-weight: 900;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.2s ease-in;
 }
 
 .btn-change {
   background-color: transparent;
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   color: var(--Bright-blue);
   text-decoration: underline;
+  width: auto;
 }
 
 .btn-top {
-  margin-top: 1.6rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
   background-color: var(--Bright-blue);
   padding: 1rem 1rem;
-  width: 100%;
   color: white;
-  box-shadow: -0.2rem 0.75rem 0.75rem hsl(245, 75%, 52%, 0.25);
+  box-shadow: 0 6px 20px 5px hsla(0 0% 0% /25%);
 }
 
 .btn-bottom {
@@ -133,7 +139,7 @@ button {
    color: var(--Dark-blue);
 }
 
-@media screen and (min-width: 720px) and (min-height: 720px) {
+@media screen and (min-width: 720px) and (min-height: 695px) {
   body {
     background-image: url(../images/pattern-background-desktop.svg);
   }
@@ -143,32 +149,37 @@ button {
   }
 
   article {
-    padding: 3rem;
+    padding: 2.8rem 3rem 2.5rem;
   }
 
   h1 {
-    font-size: 1.6rem;
-  }
-
-  p, button {
-    font-size: 1rem;
-  }
-
-  h6 {
-    font-size: 1rem;
-    margin-bottom: 0.4rem;
+    font-size: 1.75rem;
   }
 
   .description {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .plan-price p {
+    font-size: 1rem;
   }
 
   .plan-price {
-    margin-left: -20%;
+    padding: 7%;
+  }
+  
+  .plan {
+    margin-top: 0;
+    margin-bottom: 5px;
   }
 
+  .btn-change {
+    font-size: 0.8rem;
+  }
+  
   .btn-top {
-    margin-top: 2.2rem;
-    margin-bottom: 2rem;
+    margin-top: 2.1rem;
+    margin-bottom: 1rem;
   }
 }
